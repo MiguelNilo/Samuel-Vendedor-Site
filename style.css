@@ -1,0 +1,39 @@
+/* CSS F0D4 */
+
+body {
+   text-align: center;
+  background-image: url("Fundo.png");
+}
+
+h1, p {
+    color: blueviolet;
+}
+
+h1 {
+    font-size: 4rem;
+    padding-top: 10rem;
+    font: italic small-caps bold 64px/2 cursive;
+}
+
+.texto-maior {
+  font: italic small-caps bold 30px/2 cursive;
+}
+
+.links {
+  font: italic small-caps bold 30px/2 cursive;
+  position: relative;
+  top: -10px;
+	float: right;
+	margin-left: -125px;
+}
+
+.fundo {
+  background-image: url("Janela.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 800px;
+  width: 800px;
+  margin: auto;
+}
+
