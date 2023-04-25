@@ -1,12 +1,13 @@
 /* CSS F0D4 */
 
 body {
-   text-align: center;
+  text-align: center;
   background-image: url("Fundo.png");
+
 }
 
 h1, p {
-    color: blueviolet;
+    color: black;
 }
 
 h1 {
