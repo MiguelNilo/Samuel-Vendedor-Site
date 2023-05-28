@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.3, maximum-scale=0.5, user-scalable=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0.3, maximum-scale=0.5, user-scalable=1">
   <link rel="stylesheet" href="style.css" />
   <title>SAMUEL VENDEDOR SITE</title>
   <link rel="icon" href="Samuca.gif">
@@ -16,22 +16,30 @@
   <IMG STYLE="position:absolute; top: 450px; left: 50px; width:200px; height:150px" SRC="comercial.gif" draggable="false">
   
   <a href="https://twitter.com/Sansaonanet" target="_blank">
-  <IMG STYLE="position:absolute; top:200px; left:50px; width:200px; height:150px" SRC="sanana.png" draggable="false">
+  <IMG STYLE="position:absolute; top:200px; left:50px; width:200px; height:150px" SRC="sanana.png" draggable="false" onmouseover="this.style.transform='scale(1.3)'" onmouseout="this.style.transform='scale(1)'">
+  </a>
+  
+  <a href="https://twitter.com/oBlackk2" target="_blank">
+  <IMG STYLE="position:absolute; top:200px; left:300px; width:200px; height:150px" SRC="Black.jpg" draggable="false" onmouseover="this.style.transform='scale(1.3)'" onmouseout="this.style.transform='scale(1)'">
+  </a>
+  
+  <a href="https://samuelentreterimentos.neocities.org/kromer">
+  <img style="position:absolute; top:200px; right:70px; width: 400px; height: 113px" src="btn_1.png" draggable="false" onmouseover="changeImage(this,'btn_2.png'),this.style.transform='scale(1.3)'" onmouseout="changeImage(this,'btn_1.png'), this.style.transform='scale(1)'">
   </a>
   
 <!--Cabeçalho-->
 
-<header style="display: flex; justify-content: center; align-items: center; background-color: #86c8ed; height: 150px; position: fixed; top: 0; left: 0; right: 0;">
+<header style="display: flex; justify-content: center; align-items: center; background-image: linear-gradient(to bottom, #86c8ed, #00a3ff); height: 150px; position: fixed; top: 0; left: 0; right: 0;">
   <a href="https://twitter.com/SamuelNaNet" target="_blank" style="margin-right: 20px;">
-    <img src="Twitter.png" alt="Twitter" style="width: 70px; height: 70px;" draggable="false">
+    <img src="Twitter.png" alt="Twitter" style="width: 70px; height: 70px;" draggable="false" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
   </a>
   
   <a href="https://www.instagram.com/https.samuel_vendedor/" target="_blank" style="margin-right: 20px;">
-    <img src="Instagram.png" alt="Instagram" style="width: 70px; height: 70px;" draggable="false">
+    <img src="Instagram.png" alt="Instagram" style="width: 70px; height: 70px;" draggable="false" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
   </a>
   
   <a href="https://www.youtube.com/channel/UCs6G0uyjlEahhLaKfYhlh1A" target="_blank">
-    <img src="Youtube.png" alt="Youtube" style="width: 70px; height: 70px;" draggable="false">
+    <img src="Youtube.png" alt="Youtube" style="width: 70px; height: 70px;" draggable="false" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
   </a>
 </header>
 
@@ -49,6 +57,17 @@
         <a href="https://cdn.discordapp.com/attachments/341979206969982976/1088215229797761054/20230320_153352.jpg">CLIQUE AQUI !!</a>
       </p>
     </main>
+     <audio loop autoplay id="bgm">
+        <source src="https://deltarune.com/assets/audio/midi-spamton.mp3" type="audio/mpeg">
+     </audio>
   </div>
+  
+<!--JavaScript-->
+<script>
+function changeImage(element, newImage) {
+  element.src = newImage;
+}
+</script>
+
 </body>
 </html>
