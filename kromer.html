@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CONSUMA O KROMER</title>
+<link rel="icon" type="image/ico" href="Samuca.gif">
+<link rel="stylesheet" href="style_kromer.css" />
+</head>
+
+<!--Estrutura-->
+
+<body>
+  <a class="home-link" href="https://samuelentreterimentos.neocities.org/">VOLTAR</a>
+  <div class="titulo">CONSUMA O KROMER</div>
+  <div id="contador">0 Kromers consumidos</div>
+  
+  <div class="container">
+  
+    <div class="box2">
+      <div id="kromer"></div>
+      
+    </div>
+    
+    <div class="box">
+      <div id="samuel"></div>
+      
+    </div>
+    
+<!--Áudio-->
+      <audio loop autoplay id="bgm">
+        <source src="https://deltarune.com/assets/audio/midi-spamton-battle.mp3" type="audio/mpeg">
+      </audio>
+  </div>
+
+<!--JavaScript-->
+
+  <script>
+var samuel = document.getElementById("samuel");
+var kromer = document.getElementById("kromer");
+var counter = document.getElementById("contador");
+
+var isDragging = false;
+var initialX, initialY;
+var currentX, currentY;
+var kromerCount = 0;
+var isKromerDropped = false;
+
+kromer.addEventListener("mousedown", startDragging);
+kromer.addEventListener("touchstart", startDragging);
+
+window.addEventListener("mousemove", dragKromer);
+window.addEventListener("touchmove", dragKromer);
+
+window.addEventListener("mouseup", endDragging);
+window.addEventListener("touchend", endDragging);
+
+function startDragging(event) {
+  isDragging = true;
+
+  initialX = event.clientX || event.touches[0].clientX;
+  initialY = event.clientY || event.touches[0].clientY;
+
+  event.preventDefault();
+}
+
+function dragKromer(event) {
+  if (isDragging) {
+    currentX = event.clientX || event.touches[0].clientX;
+    currentY = event.clientY || event.touches[0].clientY;
+    var deltaX = (currentX - initialX) / 0.9; // Adjust the scaling factor as per your preference
+    var deltaY = currentY - initialY;
+
+    kromer.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+
+    var kromerRect = kromer.getBoundingClientRect();
+    var samuelRect = samuel.getBoundingClientRect();
+
+    if (
+      kromerRect.left >= samuelRect.left &&
+      kromerRect.right <= samuelRect.right &&
+      kromerRect.top >= samuelRect.top &&
+      kromerRect.bottom <= samuelRect.bottom
+    ) {
+      samuel.style.backgroundImage = "url('2.png')";
+      isKromerDropped = true;
+    } else {
+      samuel.style.backgroundImage = "url('1.png')";
+      isKromerDropped = false;
+    }
+  }
+}
+
+function endDragging(event) {
+  if (isDragging) {
+    isDragging = false;
+
+    kromer.style.transform = "translate(0, 0)";
+
+    if (isKromerDropped) {
+      kromerCount++;
+      counter.textContent = kromerCount + " kromers consumidos";
+
+      if (typeof Storage !== "undefined") {
+        localStorage.setItem("kromerCount", kromerCount);
+      }
+    }
+
+    isKromerDropped = false;
+
+    samuel.style.backgroundImage = "url('1.png')";
+  }
+}
+
+if (typeof Storage !== "undefined") {
+  var savedKromerCount = localStorage.getItem("KromerCount");
+  if (savedKromerCount !== null) {
+    kromerCount = parseInt(savedKromerCount);
+    counter.textContent = kromerCount + " kromers consumidos";
+  }
+}
+  </script>
+  
+</body>
+</html>
