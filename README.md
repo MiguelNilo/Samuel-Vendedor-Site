@@ -1,6 +1,6 @@
 # Samuel Vendedor Site
 
->Ferramentas utilizadas
+>Desenvolvido com:
 >
 * HTML5
 * CSS3
