@@ -1,40 +1,187 @@
-/* CSS F0D4 */
+/*CSS*/
 
 body {
-  text-align: center;
-  background-image: url("Fundo.png");
-
+    background: url(img/Fundo.png) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: scroll;
 }
 
-h1, p {
-    color: black;
+/*Fontes Customizadas*/
+
+@font-face {
+    font-family: 'Delta';
+    src: url('./src/deltarune.ttf') format('truetype');
 }
 
-h1 {
-    font-size: 4rem;
-    padding-top: 10rem;
-    font: italic small-caps bold 64px/2 cursive;
+@font-face {
+    font-family: 'Escrita';
+    src: url('./src/8bitOperatorPlus-Bold.woff') format('woff');
 }
 
-.texto-maior {
-  font: italic small-caps bold 30px/2 cursive;
+/*Elementos*/
+
+.quadrado {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 6px;
+    min-width: 300px;
+    width: 50%;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.816);
 }
 
-.links {
-  font: italic small-caps bold 30px/2 cursive;
-  position: relative;
-  top: -10px;
-	float: right;
-	margin-left: -125px;
+.titulo {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 45px;
+    font-family: Delta;
+    color: whitesmoke;
 }
 
-.fundo {
-  background-image: url("Janela.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 800px;
-  width: 800px;
-  margin: auto;
+.texto {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-family: Escrita;
+    color: whitesmoke;
 }
 
+.img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.icones {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.icones:hover {
+    transform: scale(1.4);
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #86c8ed, #00a3ff);
+    height: 125px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: box-shadow 0.3s ease;
+    z-index: 9999;
+}
+
+.head:hover {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+audio::-webkit-media-controls {
+    display: none !important;
+}
+
+audio {
+    display: none;
+}
+
+.botao {
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    width: 400px;
+    height: 113px;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_2.png);
+    background-size: 100% 100%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.botao:active {
+    animation: none;
+}
+
+/*Responsividade*/
+
+@media (max-width: 768px) {
+    .texto {
+        font-size: 15px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        height: auto;
+        padding: 10px;
+    }
+
+    .quadrado {
+        width: 90%;
+        min-width: 90%;
+    }
+
+    .titulo {
+        font-size: 35px;
+    }
+}
+
+/*Resolução*/
+
+@media (max-width: 1800px) {
+    .botao {
+        position: relative;
+        width: 319px;
+        height: 90px;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_2.png);
+        background-size: 100% 100%;
+    }
+}
