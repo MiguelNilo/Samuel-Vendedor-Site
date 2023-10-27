@@ -1,123 +1,153 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>CONSUMA O KROMER</title>
-<link rel="icon" type="image/ico" href="Samuca.gif">
-<link rel="stylesheet" href="style_kromer.css" />
+    <title>CONSUMA O KROMER</title>
+    <link rel="icon" type="image/ico" href="img/Samuca.gif">
+    <link rel="stylesheet" href="style_kromer.css" />
 </head>
 
 <!--Estrutura-->
 
 <body>
-  <a class="home-link" href="https://samuelentreterimentos.neocities.org/">VOLTAR</a>
-  <div class="titulo">CONSUMA O KROMER</div>
-  <div id="contador">0 Kromers consumidos</div>
-  
-  <div class="container">
-  
-    <div class="box2">
-      <div id="kromer"></div>
-      
+    <div class="container"></div>
+
+    <a class="home-link" style="font-size: 18px" href="index.html">VOLTAR</a>
+    <div class="titulo">CONSUMA O KROMER</div>
+    <div id="contador">0 Kromers consumidos</div>
+
+    <div class="container">
+        <div class="box">
+            <div id="kromer"></div>
+        </div>
+
+        <div class="box">
+            <div id="samuel"></div>
+        </div>
+
+        <div class="box2">
+            <img src="img/Samuca.gif" onclick="playAudio()" draggable="false">
+        </div>
     </div>
-    
-    <div class="box">
-      <div id="samuel"></div>
-      
+    <div style="font-size: 24px">
+        <b>ARR4ST3 O [[Kromer]] AT3 [[Samuel Vendedor]] !! YUM YUM !</b>
     </div>
-    
-<!--Áudio-->
-      <audio loop autoplay id="bgm">
+
+    <!--Áudio-->
+    <audio loop autoplay id="bgm">
         <source src="https://deltarune.com/assets/audio/midi-spamton-battle.mp3" type="audio/mpeg">
-      </audio>
-  </div>
+    </audio>
 
-<!--JavaScript-->
+    <audio id="audio">
+        <source src="https://static.wikia.nocookie.net/villains/images/f/fd/Now%27sYourChance.mp3" type="audio/mpeg">
+    </audio>
 
-  <script>
-var samuel = document.getElementById("samuel");
-var kromer = document.getElementById("kromer");
-var counter = document.getElementById("contador");
+    <!--JavaScript-->
 
-var isDragging = false;
-var initialX, initialY;
-var currentX, currentY;
-var kromerCount = 0;
-var isKromerDropped = false;
+    <script>
+        var samuel = document.getElementById("samuel");
+        var kromer = document.getElementById("kromer");
+        var counter = document.getElementById("contador");
 
-kromer.addEventListener("mousedown", startDragging);
-kromer.addEventListener("touchstart", startDragging);
+        var isDragging = false;
+        var initialX, initialY;
+        var currentX, currentY;
+        var kromerCount = 0;
+        var isKromerDropped = false;
 
-window.addEventListener("mousemove", dragKromer);
-window.addEventListener("touchmove", dragKromer);
+        kromer.addEventListener("mousedown", startDragging);
+        kromer.addEventListener("touchstart", startDragging);
 
-window.addEventListener("mouseup", endDragging);
-window.addEventListener("touchend", endDragging);
+        window.addEventListener("mousemove", dragKromer);
+        window.addEventListener("touchmove", dragKromer);
 
-function startDragging(event) {
-  isDragging = true;
+        window.addEventListener("mouseup", endDragging);
+        window.addEventListener("touchend", endDragging);
 
-  initialX = event.clientX || event.touches[0].clientX;
-  initialY = event.clientY || event.touches[0].clientY;
+        function startDragging(event) {
+            isDragging = true;
 
-  event.preventDefault();
-}
+            initialX = event.clientX || event.touches[0].clientX;
+            initialY = event.clientY || event.touches[0].clientY;
 
-function dragKromer(event) {
-  if (isDragging) {
-    currentX = event.clientX || event.touches[0].clientX;
-    currentY = event.clientY || event.touches[0].clientY;
-    var deltaX = (currentX - initialX) / 0.9; // Adjust the scaling factor as per your preference
-    var deltaY = currentY - initialY;
+            event.preventDefault();
+        }
 
-    kromer.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        function dragKromer(event) {
+            if (isDragging) {
+                currentX = event.clientX || event.touches[0].clientX;
+                currentY = event.clientY || event.touches[0].clientY;
+                var deltaX = (currentX - initialX) / 0.9; // Adjust the scaling factor as per your preference
+                var deltaY = currentY - initialY;
 
-    var kromerRect = kromer.getBoundingClientRect();
-    var samuelRect = samuel.getBoundingClientRect();
+                kromer.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
 
-    if (
-      kromerRect.left >= samuelRect.left &&
-      kromerRect.right <= samuelRect.right &&
-      kromerRect.top >= samuelRect.top &&
-      kromerRect.bottom <= samuelRect.bottom
-    ) {
-      samuel.style.backgroundImage = "url('2.png')";
-      isKromerDropped = true;
-    } else {
-      samuel.style.backgroundImage = "url('1.png')";
-      isKromerDropped = false;
-    }
-  }
-}
+                var kromerRect = kromer.getBoundingClientRect();
+                var samuelRect = samuel.getBoundingClientRect();
 
-function endDragging(event) {
-  if (isDragging) {
-    isDragging = false;
+                if (
+                    kromerRect.left >= samuelRect.left &&
+                    kromerRect.right <= samuelRect.right &&
+                    kromerRect.top >= samuelRect.top &&
+                    kromerRect.bottom <= samuelRect.bottom
+                ) {
+                    samuel.style.backgroundImage = "url('img/2.png')";
+                    isKromerDropped = true;
+                } else {
+                    samuel.style.backgroundImage = "url('img/1.png')";
+                    isKromerDropped = false;
+                }
+            }
+        }
 
-    kromer.style.transform = "translate(0, 0)";
+        function endDragging(event) {
+            if (isDragging) {
+                isDragging = false;
 
-    if (isKromerDropped) {
-      kromerCount++;
-      counter.textContent = kromerCount + " kromers consumidos";
+                kromer.style.transform = "translate(0, 0)";
 
-      if (typeof Storage !== "undefined") {
-        localStorage.setItem("kromerCount", kromerCount);
-      }
-    }
+                if (isKromerDropped) {
+                    kromerCount++;
+                    counter.textContent = kromerCount + " Kromers consumidos";
 
-    isKromerDropped = false;
+                    if (typeof Storage !== "undefined") {
+                        localStorage.setItem("kromerCount", kromerCount);
+                    }
+                }
 
-    samuel.style.backgroundImage = "url('1.png')";
-  }
-}
+                isKromerDropped = false;
 
-if (typeof Storage !== "undefined") {
-  var savedKromerCount = localStorage.getItem("KromerCount");
-  if (savedKromerCount !== null) {
-    kromerCount = parseInt(savedKromerCount);
-    counter.textContent = kromerCount + " kromers consumidos";
-  }
-}
-  </script>
-  
+                samuel.style.backgroundImage = "url('img/1.png')";
+            }
+        }
+
+        if (typeof Storage !== "undefined") {
+            var savedKromerCount = localStorage.getItem("kromerCount");
+            if (savedKromerCount !== null) {
+                kromerCount = parseInt(savedKromerCount);
+                counter.textContent = kromerCount + " Kromers consumidos";
+            }
+        }
+    </script>
+
+    <script>
+        function playAudio() {
+            var bgmAudio = document.getElementById("bgm");
+            var audio = document.getElementById("audio");
+
+            bgmAudio.pause();
+
+            audio.play();
+        }
+
+        var audio = document.getElementById("audio");
+        var bgmAudio = document.getElementById("bgm");
+
+        audio.addEventListener("ended", function () {
+            bgmAudio.play();
+        });
+    </script>
+
 </body>
+
 </html>
