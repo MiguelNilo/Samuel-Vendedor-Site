@@ -2,9 +2,9 @@
 
 >Ferramentas utilizadas
 >
-*HTML5
-*CSS3
-*JavaScript
+* HTML5
+* CSS3
+* JavaScript
 
 >Sobre o site
 
