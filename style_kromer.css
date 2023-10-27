@@ -1,94 +1,160 @@
 body {
-      background-image: url("Fundo.png");
-      margin: 0;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: Italic;
+    background-image: url("img/Fundo.png");
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Escrita;
 }
+
+/*Fontes*/
+
+@font-face {
+    font-family: 'Delta';
+    src: url('./src/deltarune.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Escrita';
+    src: url('./src/8bitOperatorPlus-Bold.woff') format('woff');
+}
+
+/*Estrutura*/
 
 html {
-      transform: scale(0.9);
-      transform-origin: center;
+    transform: scale(0.9);
+    transform-origin: center;
 }
-    
 
 .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .box {
-      background-color: white;
-      padding: 5px;
-      border-radius: 8px;
-      margin-right: 100px;
-      margin-left: auto;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 6px;
+    border: 5px solid rgb(255, 255, 255);
+    margin-right: 40px;
 }
 
 .box2 {
-      background-color: black;
-      padding: 20px;
-      border-radius: 8px;
-      margin-right: 100px;
-      margin-left: auto;
-      border: 5px solid white;
+    width: 90px;
+    height: 100px;
+    position: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 6px;
+    border: 5px solid rgb(255, 255, 255);
+    margin: auto;
 }
 
+.box2 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.box2 img:hover {
+    transform: scale(1.35);
+}
+
+.propaganda {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*Objetos*/
+
 #samuel {
-      width: 600px;
-      height: 450px;
-      background-image: url('1.png');
-      background-size: contain;
-      background-repeat: no-repeat;
+    width: 600px;
+    height: 450px;
+    background-image: url('img/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #kromer {
-      width: 90px;
-      height: 100px;
-      background-image: url('kromer.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: center;
-      cursor: pointer;
+    width: 90px;
+    height: 100px;
+    background-image: url('img/kromer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: center;
+    cursor: pointer;
 }
 
 #contador {
-      font-size: 24px;
-      font-weight: bold;
-      color: black;
-      margin-bottom: 20px;
-      position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+    position: relative;
 }
 
+/*Estrutura*/
+
 .home-link {
-      text-decoration: none;
-      font-family: Italic;
-      font-size: 18px;
-      font-weight: bold;
-      color: white;
-      background-color: black;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
+    text-decoration: none;
+    font-family: Escrita;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.816);
 }
 
 .titulo {
-      font-family: Italic;
-      font-size: 30px;
-      font-weight: bold;
-      margin-bottom: 20px;
+    font-family: Delta;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
 }
 
+.quadrado {
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 6px;
+    min-width: 450px;
+    width: 50%;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.816);
+}
+
+/*Áudios*/
+
 audio::-webkit-media-controls {
-      display: none !important;
+    display: none !important;
 }
 
 audio {
-      display: none;
+    display: none;
 }
