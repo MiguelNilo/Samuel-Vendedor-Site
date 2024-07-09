@@ -87,6 +87,13 @@ body {
     z-index: 9999;
 }
 
+.head a{
+    font-family: Escrita;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+
 .head:hover {
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
@@ -98,6 +105,8 @@ audio::-webkit-media-controls {
 audio {
     display: none;
 }
+
+/*Botões*/
 
 .botao {
     position: absolute;
@@ -117,6 +126,188 @@ audio {
     background-size: 100% 100%;
 }
 
+.botao-2 {
+    position: absolute;
+    top: 323px;
+    right: 50px;
+    width: 400px;
+    height: 113px;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_3.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-2:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_4.png);
+    background-size: 100% 100%;
+}
+
+.botao-samuel {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_samuel1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-samuel:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_samuel2.png);
+    background-size: 100% 100%;
+}
+
+.botao-jelson {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_jelson1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-jelson:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_jelson2.png);
+    background-size: 100% 100%;
+}
+
+.botao-rei {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_rei1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-rei:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_rei2.png);
+    background-size: 100% 100%;
+}
+
+.botao-luan {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_luan1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-luan:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_luan2.png);
+    background-size: 100% 100%;
+}
+
+.botao-roberto {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_roberto1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-roberto:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_roberto2.png);
+    background-size: 100% 100%;
+}
+
+.botao-rainha {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_rainha1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-rainha:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_rainha2.png);
+    background-size: 100% 100%;
+}
+
+.botao-fera {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_fera1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-fera:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_fera2.png);
+    background-size: 100% 100%;
+}
+
+.botao-neo {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_neo1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-neo:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_neo2.png);
+    background-size: 100% 100%;
+}
+
+.botao-marinalva {
+    position: relative;
+    width: 400px;
+    height: 113px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    background-image: url(img/btn_marinalva1.png);
+    background-size: 100% 100%;
+    animation: pulse 1s infinite;
+}
+
+.botao-marinalva:hover {
+    transform: scale(1.2);
+    background-image: url(img/btn_marinalva2.png);
+    background-size: 100% 100%;
+}
+
+/*Fim dos Botões*/
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -132,6 +323,46 @@ audio {
 }
 
 .botao:active {
+    animation: none;
+}
+
+.botao-2:active {
+    animation: none;
+}
+
+.botao-samuel:active {
+    animation: none;
+}
+
+.botao-jelson:active {
+    animation: none;
+}
+
+.botao-rei:active {
+    animation: none;
+}
+
+.botao-luan:active {
+    animation: none;
+}
+
+.botao-roberto:active {
+    animation: none;
+}
+
+.botao-rainha:active {
+    animation: none;
+}
+
+.botao-fera:active {
+    animation: none;
+}
+
+.botao-neo:active {
+    animation: none;
+}
+
+.botao-marinalva:active {
     animation: none;
 }
 
@@ -156,6 +387,12 @@ audio {
 
     .titulo {
         font-size: 35px;
+    }
+    
+    .icones {
+        width: 55px;
+        height: 55px;
+        transition: transform 0.3s ease;
     }
 }
 
@@ -182,6 +419,227 @@ audio {
     .botao:hover {
         transform: scale(1.2);
         background-image: url(img/btn_2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-2 {
+        position: relative;
+        width: 319px;
+        height: 90px;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_3.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-2:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_4.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-samuel {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_samuel1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-samuel:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_samuel2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-jelson {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_jelson1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-jelson:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_jelson2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-rei {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_rei1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-rei:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_rei2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-luan {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_luan1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-luan:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_luan2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-roberto {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_roberto1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-roberto:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_roberto2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-rainha {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_rainha1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-rainha:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_rainha2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-fera {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_fera1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-fera:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_fera2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-neo {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_neo1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-neo:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_neo2.png);
+        background-size: 100% 100%;
+    }
+
+    .botao-marinalva {
+        position: relative;
+        width: 65%;
+        transition: transform 0.3s ease;
+        background-image: url(img/btn_marinalva1.png);
+        background-size: 100% 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .botao-marinalva:hover {
+        transform: scale(1.2);
+        background-image: url(img/btn_marinalva2.png);
         background-size: 100% 100%;
     }
 }
